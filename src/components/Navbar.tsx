@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, Gamepad2 } from "lucide-react";
+import { Home, Gamepad2, DollarSign } from "lucide-react";
 
 const Navbar: React.FC = () => {
   return (
@@ -24,6 +24,12 @@ const Navbar: React.FC = () => {
           </Link>
           <Link to="/standoff">
             <Button variant="ghost">Standoff 2</Button>
+          </Link>
+          <Link to="/fortnite-vbucks">
+            <Button variant="ghost" className="flex items-center gap-2">
+              <DollarSign className="h-4 w-4" />
+              <span>V-Bucks</span>
+            </Button>
           </Link>
         </nav>
       </div>
