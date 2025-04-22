@@ -1,17 +1,22 @@
 import React from "react";
 
 interface PageFooterProps {
-  gameName?: string;
+  copyrightName: string;
+  disclaimerText: string;
+  trademarkText: string;
 }
 
-const PageFooter: React.FC<PageFooterProps> = ({ gameName = "ИгроСкины" }) => {
+export const PageFooter: React.FC<PageFooterProps> = ({
+  copyrightName,
+  disclaimerText,
+  trademarkText
+}) => {
   return (
     <footer className="border-t py-6 bg-background">
       <div className="container text-center text-sm text-muted-foreground">
-        <p>© 2023 {gameName}. Этот сайт не имеет отношения к разработчикам игры.</p>
+        <p>© {new Date().getFullYear()} {copyrightName}. {disclaimerText}</p>
+        <p className="mt-1">{trademarkText}</p>
       </div>
     </footer>
   );
 };
-
-export default PageFooter;

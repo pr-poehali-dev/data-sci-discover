@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Fortnite from "./pages/Fortnite";
 import Standoff from "./pages/Standoff";
 import FortniteVBucks from "./pages/FortniteVBucks";
+import RobloxRobux from "./pages/RobloxRobux";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/fortnite" element={<Fortnite />} />
           <Route path="/standoff" element={<Standoff />} />
           <Route path="/fortnite-vbucks" element={<FortniteVBucks />} />
+          <Route path="/roblox-robux" element={<RobloxRobux />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
